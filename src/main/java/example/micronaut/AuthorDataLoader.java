@@ -14,8 +14,7 @@ import io.micronaut.scheduling.TaskExecutors;
 import jakarta.inject.Named;
 import jakarta.inject.Singleton;
 
-
-@Singleton
+@Singleton 
 public class AuthorDataLoader implements MappedBatchLoader<Long, Author> {
 
     private final AuthorRepository authorRepository;
@@ -23,7 +22,7 @@ public class AuthorDataLoader implements MappedBatchLoader<Long, Author> {
 
     public AuthorDataLoader(
             AuthorRepository authorRepository,
-            @Named(TaskExecutors.IO) ExecutorService executor
+            @Named(TaskExecutors.IO) ExecutorService executor 
     ) {
         this.authorRepository = authorRepository;
         this.executor = executor;
@@ -38,4 +37,5 @@ public class AuthorDataLoader implements MappedBatchLoader<Long, Author> {
                 executor
         );
     }
+
 }

@@ -8,23 +8,23 @@ import org.slf4j.LoggerFactory;
 import io.micronaut.context.annotation.Factory;
 import io.micronaut.runtime.http.scope.RequestScope;
 
-
-@Factory
+@Factory 
 public class DataLoaderRegistryFactory {
 
     private static final Logger LOG = LoggerFactory.getLogger(DataLoaderRegistryFactory.class);
 
     @SuppressWarnings("unused")
-    @RequestScope
+    @RequestScope 
     public DataLoaderRegistry dataLoaderRegistry(AuthorDataLoader authorDataLoader) {
         DataLoaderRegistry dataLoaderRegistry = new DataLoaderRegistry();
         dataLoaderRegistry.register(
-                    "author", 
-                    DataLoader.newMappedDataLoader(authorDataLoader)
-        );
+                "author",
+                DataLoader.newMappedDataLoader(authorDataLoader)
+        ); 
 
-        LOG.trace("created new data loader registry");
+        LOG.trace("Created new data loader registry");
 
         return dataLoaderRegistry;
     }
+
 }

@@ -7,12 +7,12 @@ import static io.micronaut.data.annotation.GeneratedValue.Type.AUTO;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
 
-@MappedEntity
+@MappedEntity 
 public class Author {
 
-    @Id
+    @Id 
     @GeneratedValue(AUTO)
-    private Long Id;
+    private Long id;
 
     @NotNull
     private final String username;
@@ -22,15 +22,14 @@ public class Author {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {
         return username;
     }
-
 }
