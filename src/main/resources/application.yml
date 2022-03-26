@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: micronautguide
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    schema-generate: NONE
+    dialect: POSTGRES
+netty:
+  default:
+    allocator:
+      max-order: 3
+flyway:
+  datasources:
+    default:
+      enabled: true
